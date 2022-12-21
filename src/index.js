@@ -15,8 +15,8 @@ app.listen(process.env.PORT, () => {
 
 dbConnection();
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
-
 app.use("/books", require("./routers/books.routes"));
+
+app.get("/", (req, res) => {
+  res.send("Home");
+});
