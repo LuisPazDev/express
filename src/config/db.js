@@ -4,7 +4,7 @@ mongoose.set("strictQuery", false);
 
 const dbConnection = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
+    await mongoose.connect(process.env.MONGODB_URL);
     console.log("");
     console.log(`\x1b[34m **************************** \x1b[0m`);
     console.log(`\x1b[34m **   Connected to Mongo   ** \x1b[0m`);

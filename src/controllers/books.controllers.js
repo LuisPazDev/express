@@ -1,4 +1,4 @@
-const Book = require("../models/BookModel");
+const Book = require("../models/BookScheme");
 const { message, messagError, resApi } = require("../helpers/helpers");
 
 const getBooks = async (req, res) => {

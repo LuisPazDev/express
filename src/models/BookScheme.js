@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bookScheme = mongoose.Schema({
   bookName: {
     type: String,
-    required: true,
+    require: true,
   },
   published: {
     type: Date,
@@ -13,6 +13,6 @@ const bookScheme = mongoose.Schema({
   },
 });
 
-const Book = mongoose.model("Book", bookScheme);
+const Book = mongoose.model("book", bookScheme);
 
 module.exports = Book;
