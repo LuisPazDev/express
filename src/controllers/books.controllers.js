@@ -5,7 +5,7 @@ const getBooks = async (req, res) => {
   try {
     message("Books loaded");
     const books = await Book.find({});
-    // console.log("test");
+    // console.log(books);
     resApi(res, "ok", books);
   } catch {
     messagError("Error loading books");
