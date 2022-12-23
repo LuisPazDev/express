@@ -7,11 +7,12 @@ const messagError = (msg) => {
 };
 
 const resApi = (res, msg, data) => {
-  res.json({
-    msg: msg,
-    total: data.length,
-    data: data,
-  });
+  res.send("prueba rest api");
+  // res.json({
+  //   msg: msg,
+  //   total: data.length,
+  //   data: data,
+  // });
 };
 
 module.exports = {
