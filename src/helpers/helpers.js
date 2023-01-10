@@ -11,7 +11,7 @@ const resApi = (res, msg, data) => {
   res.json({
     msg: msg,
     total: data.length,
-    data: data,
+    data,
   });
 };
 

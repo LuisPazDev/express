@@ -1,10 +1,12 @@
-require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const bodyParser = require("body-parser");
 const { dbConnection } = require("./config/db");
 
 app.use(bodyParser.json());
+
+app.use(cors());
 
 app.listen(process.env.PORT, () => {
   console.log("");
@@ -15,7 +17,9 @@ app.listen(process.env.PORT, () => {
 
 dbConnection();
 
-app.use("/books", require("./routers/books.routes"));
+app.use("/user", require("./routers/users.routes"));
+
+app.use("/login", require("./routers/login.routes"));
 
 app.get("/", (req, res) => {
   res.send("Home");
